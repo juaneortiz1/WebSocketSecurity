@@ -1,21 +1,34 @@
 package org.apache.maven.archetypes.maven_archetype_quickstart.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-@RestController
-public class DrawingServiceController {
-    @RequestMapping(
-            value = "/status",
-            method = RequestMethod.GET,
-            produces = "application/json"
-    )
-    public String status() {
-        return "{\"status\":\"Greetings from Spring Boot. "
-                + java.time.LocalDate.now() + ", "
-                + java.time.LocalTime.now()
-                + ". " + "The server is Runnig!\"}";
+import org.apache.maven.archetypes.maven_archetype_quickstart.model.MainUser;
+import org.apache.maven.archetypes.maven_archetype_quickstart.model.User;
+import org.apache.maven.archetypes.maven_archetype_quickstart.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+@Service
+public class DrawingServiceController implements UserDetailsService {
+
+    @Autowired
+    private UserService userService;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) {
+        User user = userService.findByName(username);
+        if (user == null) {
+            throw new UsernameNotFoundException(username);
+        }
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+        return new MainUser(user, new HashSet<>(authorities));
     }
 }

@@ -1,15 +1,14 @@
 package org.apache.maven.archetypes.maven_archetype_quickstart.endpoints;
 
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.logging.Logger;
-
-
 import jakarta.websocket.*;
 import jakarta.websocket.server.ServerEndpoint;
 import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 @Component
 @ServerEndpoint("/bbService")
 
