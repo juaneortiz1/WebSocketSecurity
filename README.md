@@ -23,6 +23,9 @@ This application demonstrates real-time bidirectional communication between clie
 
 ## Screenshots
 
+![image](https://github.com/juaneortiz1/InteractiveBoardWS/assets/97971732/162254a4-8354-4cf8-b106-440f8ca2d34f)
+![image](https://github.com/juaneortiz1/InteractiveBoardWS/assets/97971732/b1b81589-855f-420f-b9dc-865927884a14)
+
 
 
 ## Architecture
