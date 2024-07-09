@@ -45,7 +45,7 @@ return(
 function BBServiceURL() {
 var host = window.location.host;
 console.log("Host: " + host);
-var url = 'wss://' + (host) + '/bbService';
+var url = 'ws://' + (host) + '/bbService';
 if(host.toString().startsWith("localhost")){
 url = 'ws://' + (host) + '/bbService';
 }
