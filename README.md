@@ -1,7 +1,3 @@
-Certainly! Here's an updated version of the README with the deployment information included:
-
-
-
 # Interactive Drawing App with WebSockets and ReactJS
 
 ## Overview
