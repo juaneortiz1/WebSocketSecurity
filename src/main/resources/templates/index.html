@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Interactive BB</title>
     <meta charset="UTF-8">
@@ -15,7 +15,15 @@
     </script>
 </head>
 <body>
-<div id="root"></div>
+<!-- Content -->
+<div class="row mt-4">
+    <div class="col">
+        <h1 class="mb-4">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+
+        <!-- Placeholder for React component -->
+        <div id="root"></div>
+    </div>
+</div>
 <!-- Load React. -->
 <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin>
