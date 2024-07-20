@@ -12,21 +12,19 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>org.apache.maven.archetypes</groupId>
-	<artifactId>maven-archetype-quickstart</artifactId>
+	<!-- Your project coordinates -->
+	<groupId>com.example</groupId>
+	<artifactId>your-project-artifact</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>maven-archetype-quickstart</name>
+	<name>Your Project Name</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>17</java.version>
-		<sonar.projectKey>maven-archetype-quickstart</sonar.projectKey>
-		<sonar.projectName>maven-archetype-quickstart</sonar.projectName>
+		<sonar.projectKey>your-project-key</sonar.projectKey>
+		<sonar.projectName>Your Project Name</sonar.projectName>
 		<sonar.host.url>http://localhost:9000</sonar.host.url>
 		<sonar.coverage.jacoco.xmlReportPaths>/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-
-
-
 	</properties>
 
 	<dependencies>

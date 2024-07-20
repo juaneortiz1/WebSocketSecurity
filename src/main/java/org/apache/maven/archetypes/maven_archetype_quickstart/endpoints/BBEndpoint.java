@@ -63,5 +63,7 @@ public class BBEndpoint {
         logger.log(Level.INFO, t.toString());
         logger.log(Level.INFO, "Connection error.");
     }
+
+
 }
 
