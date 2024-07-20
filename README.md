@@ -1,4 +1,3 @@
-
 # Interactive Drawing App with WebSockets and ReactJS
 
 ## Overview
@@ -11,6 +10,7 @@ This application demonstrates real-time bidirectional communication between clie
 - **Unique Client Strokes:** Each client's drawing actions are distinguishable through different stroke styles or colors.
 - **Responsive UI:** The ReactJS frontend provides an intuitive and responsive interface for drawing and viewing.
 - **Secure Authentication:** User authentication is managed using Spring Security and MongoDB.
+- **Test-Driven Development:** The application is built following TDD principles, ensuring robust and reliable code through continuous testing and feedback.
 
 ## Technologies Used
 
@@ -19,6 +19,7 @@ This application demonstrates real-time bidirectional communication between clie
 - **Database:** MongoDB (for user authentication)
 - **Communication Protocol:** WebSocket for real-time bidirectional communication
 - **Build Tools:** Maven (for backend), npm (for frontend dependencies)
+- **Testing Tools:** JUnit, Mockito, SonarLint, SonarCloud
 
 ## Screenshots
 
@@ -34,6 +35,7 @@ The architecture of the application involves three main components:
     - Manages client connections, broadcasts drawing updates to all connected clients.
     - Implements Spring Security for user authentication and authorization.
     - Utilizes MongoDB to store user credentials and authentication data.
+    - Built with a TDD approach to ensure high-quality and maintainable code.
 
 2. **Frontend (ReactJS):**
     - Provides a user-friendly interface for drawing.
@@ -43,7 +45,6 @@ The architecture of the application involves three main components:
 3. **Database (MongoDB):**
     - Stores user information for authentication and authorization purposes.
 ![image](https://github.com/user-attachments/assets/7f0e3c34-12f0-4a8a-bf78-24178511273b)
-
 
 ### Architecture Diagram
 
@@ -56,6 +57,11 @@ This project leverages ReactJS on the client-side and Spring.io on the server-si
 This application has been deployed on Amazon Web Services (AWS) and is accessible at:
 
 [http://ec2-54-90-71-142.compute-1.amazonaws.com:8080/](http://ec2-54-90-71-142.compute-1.amazonaws.com:8080/)
+
+## SonarLint SonarCloud
+![image](https://github.com/user-attachments/assets/a0b034c4-88f9-46cc-9bb0-cb269c806c9b)
+
+
 
 ## Getting Started
 
@@ -116,9 +122,3 @@ Ensure the following dependencies are included in your `pom.xml` file for Spring
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-data-mongodb</artifactId>
 </dependency>
-
-
----
-
-This README now includes the information about Spring Security for web security and MongoDB for user authentication. Let me know if you need any further modifications!
-
