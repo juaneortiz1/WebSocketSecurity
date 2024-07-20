@@ -60,6 +60,8 @@ This application has been deployed on Amazon Web Services (AWS) and is accessibl
 
 ## SonarLint SonarCloud
 ![image](https://github.com/user-attachments/assets/a0b034c4-88f9-46cc-9bb0-cb269c806c9b)
+![image](https://github.com/user-attachments/assets/91b2ad59-7682-415a-9f83-6596f2a4a59b)
+![image](https://github.com/user-attachments/assets/4097cf4d-d66b-4ad4-b6ab-abd8af2f14c3)
 
 
 
